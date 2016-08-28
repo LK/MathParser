@@ -10,6 +10,8 @@
 		B88F20671D73AC3300C19C96 /* MathParser.h in Headers */ = {isa = PBXBuildFile; fileRef = B88F20661D73AC3300C19C96 /* MathParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B88F206E1D73AC3600C19C96 /* MathParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B88F20631D73AC3100C19C96 /* MathParser.framework */; };
 		B88F20731D73AC3700C19C96 /* MathParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F20721D73AC3600C19C96 /* MathParserTests.swift */; };
+		B88F207E1D73AC6500C19C96 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F207D1D73AC6500C19C96 /* Parser.swift */; };
+		B88F20801D73AC9700C19C96 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F207F1D73AC9700C19C96 /* Operation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		B88F206D1D73AC3600C19C96 /* MathParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B88F20721D73AC3600C19C96 /* MathParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathParserTests.swift; sourceTree = "<group>"; };
 		B88F20741D73AC3700C19C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B88F207D1D73AC6500C19C96 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		B88F207F1D73AC9700C19C96 /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				B88F20661D73AC3300C19C96 /* MathParser.h */,
+				B88F207D1D73AC6500C19C96 /* Parser.swift */,
+				B88F207F1D73AC9700C19C96 /* Operation.swift */,
 				B88F20681D73AC3300C19C96 /* Info.plist */,
 			);
 			path = MathParser;
@@ -194,6 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B88F207E1D73AC6500C19C96 /* Parser.swift in Sources */,
+				B88F20801D73AC9700C19C96 /* Operation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +318,7 @@
 		B88F20781D73AC3800C19C96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -320,12 +329,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lennykhazan.MathParser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B88F20791D73AC3800C19C96 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
